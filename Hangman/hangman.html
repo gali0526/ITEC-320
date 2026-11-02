@@ -3,20 +3,23 @@
 <head>
    <link rel="stylesheet" href="hangman.css">
    <script src="hangman.js"></script>
-    <title>Document</title>
+    <title>Hangman</title>
 </head>
 <body>
     <div>
         <img src="images/hangman6.gif" alt="Picture of Hangman">
     </div>
+
     <div id="clue">Press New Game to Play</div>
+
     <div>
         <input type="text" size="1" maxlength="1">
         <button>Guess</button>
     </div>
+
     <div>
         <div id="newgamearea"></div>
-        <button>New Game</button>
+        <button onclick="newGame();">New Game</button>
     </div>
     
 </body>
