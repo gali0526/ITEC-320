@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F3F8FF;
+}
+
+h1, h2, h3{
+    color: white;
+}
+
+h1{
+    background-color: black;
+    text-align: center;
+}
+
+h2, h3{
+    background-color: #336699;
+}
+
+p{
+    text-indent: 2em;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #1D1B5B;
+}
+
+ul, ol{
+    background-color: #CCCCCC;
+}
+
+ol{
+    list-style-type: upper-roman;
+}
+
+#centered_p{
+    text-align: center;
+}
+
+.italic{
+    font-style: italic;
+}
