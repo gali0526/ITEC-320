@@ -28,7 +28,15 @@ function addSquare(){
 }
 
 function squareClicked(){
-    this.style.zIndex = getTopZ() + 1;
+    let myZ = parseInt(this.style.zIndex) || 0;
+    let topZ = getTopZ();
+
+    if(myZ === topZ && myZ > 0){
+        this.remove();
+    }
+    else{
+        this.style.zIndex = topZ + 1;
+    }
 }
 
 function getTopZ(){
