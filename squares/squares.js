@@ -21,9 +21,12 @@ function addSquare(){
 }
 
 
-for(let i = 0; i < squareCount; i++){
-    addSquare();
-}
+window.onload = function(){
+    let squareCount = parseInt(Math.random()*21)+30;
+    for(let i = 0; i < squareCount; i++){
+        addSquare();
+    }
+};
 
 function getRandomColor(){
     let possibleLetters = "0123456789ABCDEF";
