@@ -19,7 +19,6 @@ for(let i = 0; i < squareCount; i++){
 function getRandomColor(){
     let possibleLetters = "0123456789ABCDEF";
     let color="#";
-    //Do something to make a random value????
     for(let i = 0;i <6;i++){
         let position = parseInt(Math.random()*
         possibleLetters.length)
