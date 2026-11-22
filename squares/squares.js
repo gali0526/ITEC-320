@@ -17,6 +17,7 @@ function addSquare(){
     square.style.backgroundColor=getRandomColor();
     square.style.top = parseInt(Math.random()*(300-50))+"px";
     square.style.left = parseInt(Math.random()*(700-50))+"px";
+    square.onclick = squareClicked;
     squareArea.append(square);
 
     let size = parseInt(Math.random()*11)+45;
@@ -24,6 +25,22 @@ function addSquare(){
     square.style.height = size + "px";
     square.style.top = parseInt(Math.random()*(300-size))+"px";
     square.style.left = parseInt(Math.random()*(700-size))+"px";
+}
+
+function squareClicked(){
+    this.style.zIndex = getTopZ() + 1;
+}
+
+function getTopZ(){
+    let squares = document.querySelectorAll(".square");
+    let highest = 0;
+    for(let i = 0; i < squares.length; i++){
+        let z = parseInt(squares[i].style.zIndex) || 0;
+        if(z > highest){
+            highest = z;
+        }
+    }
+    return highest;
 }
 
 
