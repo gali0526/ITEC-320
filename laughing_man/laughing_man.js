@@ -1,4 +1,6 @@
-const SQUARE_COUNT= 3;
+const SQUARE_COUNT= 5;
+const TIMER_SPEED = 90;
+const SPEED = 50;
 
 const firstSquare = document.querySelector("#square");
 
@@ -18,6 +20,28 @@ for(let i =0;i<SQUARE_COUNT;i++){
     square.style.left="225px";
     square.style.top="175px";
     box.appendChild(square);
-
-
 }
+
+let squares = Array.from(box.children).forEach(
+    (element) =>{
+        let dx = SPEED *(Math.random()*2-1);
+        let dy = SPEED *(Math.random()*2-1);
+        let x = parseInt(element.style.left);
+        let y = parseInt (element .style.top);
+
+        setInterval(()=>{
+            if(x<=0 || x >= 450){
+                dx *=-1;
+            }
+
+            if(y<=0 || y>=350){
+                dy*=-1;
+            }
+
+            x = x+dx;
+            y = y+dy;
+            element.style.left=x+"px";
+            element.style.top=y+"px";
+        }, TIMER_SPEED);
+    }
+);
